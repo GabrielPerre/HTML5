@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <title>Exemplo de validação de formulario</title>
+    <style>
+        #email:valid {background: #006600; color: #fff;}
+        #email:invalid{background: #990000;color: #fff;}
+        form{border: 1px solid #666;margin: 10px;}
+    </style>
+</head>
+<body>
+
+    <form method="POST" action="">
+        <label for="nome">Nome: </label>
+        <input id="nome" type="text" required name="nome">
+        <input type="submit" value="OK"> Exemplo de campo com required
+    </form>
+
+    <form method="GET" action="">
+        <label for="email">E-mail: </label>
+        <input id="email" name="email" type="email" required>
+        <input type="submit" value="OK">
+        Exemplo de campo com required e type=email
+        mais Exemplo pseudoclasse :valid e :invalid
+    </form>
+
+    <form method="POST" action="">
+        <label for="site">Site: </label>
+        <input id="site" type="url" required>
+        <input type="submit" value="OK">Exemplo de campo com required e type=url
+    </form>
+
+    <form method="GET">
+        <label for="telefone">Telefone: </label>
+        <input required name="tel" pattern="\([0-9]{2}\)[\s][0-9]{4}-[0-9]{4}">(xx) xxxx-xxxx
+        <input type="submit" value="Enviar">Exemplo de campo com pattern. Máscara de entrada \([0-9]{2}\)[\s][0-9]{4}-[0-9]{4}
+    </form>
+
+
+    
+</body>
+</html>
