@@ -2,11 +2,23 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Exemplo de formulario</title>
 </head>
 <body>
+    <form method="POST">
+
+        <label for="endemail">E-mail: </label><br>
+            <input type="email" name="endemail" placeholder="Digite seu E-mail" required> <br>
+        <label for="idade">Idade: </label><br>
+            <input type="number" name="idade" min="1" max="120" placeholder="Informe sua idade"><br>    
+        <label for="datNasc">Data de nascimento: </label><br>
+            <input type="date" name="datNasc">    
+        
+        <br>
+
+        <input type="submit" value="Enviar">
+
+    </form>
     
 </body>
 </html>
